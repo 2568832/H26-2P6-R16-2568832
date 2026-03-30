@@ -28,120 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lsvExemple = new System.Windows.Forms.ListView();
-            this.clhCol1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCol2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCol3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.clhCol4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnPeuplerListView = new System.Windows.Forms.Button();
-            this.btnAjouterUneLigneV3 = new System.Windows.Forms.Button();
-            this.btnAfficherLigneSelectionnee = new System.Windows.Forms.Button();
-            this.btnAjouterUneLigneV1 = new System.Windows.Forms.Button();
-            this.btnAjouterUneLigneV2 = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            lsvExemple = new ListView();
+            clhCol1 = new ColumnHeader();
+            clhCol2 = new ColumnHeader();
+            clhCol3 = new ColumnHeader();
+            clhCol4 = new ColumnHeader();
+            btnPeuplerListView = new Button();
+            btnAjouterUneLigneV3 = new Button();
+            btnAfficherLigneSelectionnee = new Button();
+            btnAjouterUneLigneV1 = new Button();
+            btnAjouterUneLigneV2 = new Button();
+            SuspendLayout();
             // 
             // lsvExemple
             // 
-            this.lsvExemple.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.clhCol1,
-            this.clhCol2,
-            this.clhCol3,
-            this.clhCol4});
-            this.lsvExemple.FullRowSelect = true;
-            this.lsvExemple.HideSelection = false;
-            this.lsvExemple.Location = new System.Drawing.Point(22, 23);
-            this.lsvExemple.Name = "lsvExemple";
-            this.lsvExemple.Size = new System.Drawing.Size(250, 273);
-            this.lsvExemple.TabIndex = 0;
-            this.lsvExemple.UseCompatibleStateImageBehavior = false;
-            this.lsvExemple.View = System.Windows.Forms.View.Details;
+            lsvExemple.Columns.AddRange(new ColumnHeader[] { clhCol1, clhCol2, clhCol3, clhCol4 });
+            lsvExemple.FullRowSelect = true;
+            lsvExemple.Location = new Point(26, 27);
+            lsvExemple.Margin = new Padding(4, 3, 4, 3);
+            lsvExemple.Name = "lsvExemple";
+            lsvExemple.Size = new Size(291, 314);
+            lsvExemple.TabIndex = 0;
+            lsvExemple.UseCompatibleStateImageBehavior = false;
+            lsvExemple.View = View.Details;
+            lsvExemple.SelectedIndexChanged += lsvExemple_SelectedIndexChanged;
             // 
             // clhCol1
             // 
-            this.clhCol1.Text = "CA";
+            clhCol1.Text = "CA";
+            clhCol1.Width = 100;
             // 
             // clhCol2
             // 
-            this.clhCol2.Text = "C2";
-            this.clhCol2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            clhCol2.Text = "C2";
+            clhCol2.TextAlign = HorizontalAlignment.Center;
             // 
             // clhCol3
             // 
-            this.clhCol3.Text = "C3";
-            this.clhCol3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            clhCol3.Text = "C3";
+            clhCol3.TextAlign = HorizontalAlignment.Center;
             // 
             // clhCol4
             // 
-            this.clhCol4.Text = "C4";
-            this.clhCol4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            clhCol4.Text = "C4";
+            clhCol4.TextAlign = HorizontalAlignment.Center;
             // 
             // btnPeuplerListView
             // 
-            this.btnPeuplerListView.Location = new System.Drawing.Point(291, 139);
-            this.btnPeuplerListView.Name = "btnPeuplerListView";
-            this.btnPeuplerListView.Size = new System.Drawing.Size(203, 23);
-            this.btnPeuplerListView.TabIndex = 1;
-            this.btnPeuplerListView.Text = "Peupler le ListView";
-            this.btnPeuplerListView.UseVisualStyleBackColor = true;
-            this.btnPeuplerListView.Click += new System.EventHandler(this.btnPeuplerListView_Click);
+            btnPeuplerListView.Location = new Point(340, 160);
+            btnPeuplerListView.Margin = new Padding(4, 3, 4, 3);
+            btnPeuplerListView.Name = "btnPeuplerListView";
+            btnPeuplerListView.Size = new Size(237, 27);
+            btnPeuplerListView.TabIndex = 1;
+            btnPeuplerListView.Text = "Peupler le ListView";
+            btnPeuplerListView.UseVisualStyleBackColor = true;
+            btnPeuplerListView.Click += btnPeuplerListView_Click;
             // 
             // btnAjouterUneLigneV3
             // 
-            this.btnAjouterUneLigneV3.Location = new System.Drawing.Point(291, 81);
-            this.btnAjouterUneLigneV3.Name = "btnAjouterUneLigneV3";
-            this.btnAjouterUneLigneV3.Size = new System.Drawing.Size(203, 23);
-            this.btnAjouterUneLigneV3.TabIndex = 2;
-            this.btnAjouterUneLigneV3.Text = "Ajouter une ligne V3";
-            this.btnAjouterUneLigneV3.UseVisualStyleBackColor = true;
-            this.btnAjouterUneLigneV3.Click += new System.EventHandler(this.btnAjouterUneLigneV3_Click);
+            btnAjouterUneLigneV3.Location = new Point(340, 93);
+            btnAjouterUneLigneV3.Margin = new Padding(4, 3, 4, 3);
+            btnAjouterUneLigneV3.Name = "btnAjouterUneLigneV3";
+            btnAjouterUneLigneV3.Size = new Size(237, 27);
+            btnAjouterUneLigneV3.TabIndex = 2;
+            btnAjouterUneLigneV3.Text = "Ajouter une ligne V3";
+            btnAjouterUneLigneV3.UseVisualStyleBackColor = true;
+            btnAjouterUneLigneV3.Click += btnAjouterUneLigneV3_Click;
             // 
             // btnAfficherLigneSelectionnee
             // 
-            this.btnAfficherLigneSelectionnee.Location = new System.Drawing.Point(291, 110);
-            this.btnAfficherLigneSelectionnee.Name = "btnAfficherLigneSelectionnee";
-            this.btnAfficherLigneSelectionnee.Size = new System.Drawing.Size(203, 23);
-            this.btnAfficherLigneSelectionnee.TabIndex = 3;
-            this.btnAfficherLigneSelectionnee.Text = "Afficher l\'index de la ligne sélectionnée";
-            this.btnAfficherLigneSelectionnee.UseVisualStyleBackColor = true;
-            this.btnAfficherLigneSelectionnee.Click += new System.EventHandler(this.btnAfficherIndexLigneSelectionnee_Click);
+            btnAfficherLigneSelectionnee.Location = new Point(340, 127);
+            btnAfficherLigneSelectionnee.Margin = new Padding(4, 3, 4, 3);
+            btnAfficherLigneSelectionnee.Name = "btnAfficherLigneSelectionnee";
+            btnAfficherLigneSelectionnee.Size = new Size(237, 27);
+            btnAfficherLigneSelectionnee.TabIndex = 3;
+            btnAfficherLigneSelectionnee.Text = "Afficher l'index de la ligne sélectionnée";
+            btnAfficherLigneSelectionnee.UseVisualStyleBackColor = true;
+            btnAfficherLigneSelectionnee.Click += btnAfficherIndexLigneSelectionnee_Click;
             // 
             // btnAjouterUneLigneV1
             // 
-            this.btnAjouterUneLigneV1.Location = new System.Drawing.Point(291, 23);
-            this.btnAjouterUneLigneV1.Name = "btnAjouterUneLigneV1";
-            this.btnAjouterUneLigneV1.Size = new System.Drawing.Size(203, 23);
-            this.btnAjouterUneLigneV1.TabIndex = 4;
-            this.btnAjouterUneLigneV1.Text = "Ajouter une ligne V1";
-            this.btnAjouterUneLigneV1.UseVisualStyleBackColor = true;
-            this.btnAjouterUneLigneV1.Click += new System.EventHandler(this.btnAjouterUneLigneV1_Click);
+            btnAjouterUneLigneV1.Location = new Point(340, 27);
+            btnAjouterUneLigneV1.Margin = new Padding(4, 3, 4, 3);
+            btnAjouterUneLigneV1.Name = "btnAjouterUneLigneV1";
+            btnAjouterUneLigneV1.Size = new Size(237, 27);
+            btnAjouterUneLigneV1.TabIndex = 4;
+            btnAjouterUneLigneV1.Text = "Ajouter une ligne V1";
+            btnAjouterUneLigneV1.UseVisualStyleBackColor = true;
+            btnAjouterUneLigneV1.Click += btnAjouterUneLigneV1_Click;
             // 
             // btnAjouterUneLigneV2
             // 
-            this.btnAjouterUneLigneV2.Location = new System.Drawing.Point(291, 52);
-            this.btnAjouterUneLigneV2.Name = "btnAjouterUneLigneV2";
-            this.btnAjouterUneLigneV2.Size = new System.Drawing.Size(203, 23);
-            this.btnAjouterUneLigneV2.TabIndex = 5;
-            this.btnAjouterUneLigneV2.Text = "Ajouter une ligne V2";
-            this.btnAjouterUneLigneV2.UseVisualStyleBackColor = true;
-            this.btnAjouterUneLigneV2.Click += new System.EventHandler(this.btnAjouterUneLigneV2_Click);
+            btnAjouterUneLigneV2.Location = new Point(340, 60);
+            btnAjouterUneLigneV2.Margin = new Padding(4, 3, 4, 3);
+            btnAjouterUneLigneV2.Name = "btnAjouterUneLigneV2";
+            btnAjouterUneLigneV2.Size = new Size(237, 27);
+            btnAjouterUneLigneV2.TabIndex = 5;
+            btnAjouterUneLigneV2.Text = "Ajouter une ligne V2";
+            btnAjouterUneLigneV2.UseVisualStyleBackColor = true;
+            btnAjouterUneLigneV2.Click += btnAjouterUneLigneV2_Click;
             // 
             // FrmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 314);
-            this.Controls.Add(this.btnAjouterUneLigneV2);
-            this.Controls.Add(this.btnAjouterUneLigneV1);
-            this.Controls.Add(this.btnAfficherLigneSelectionnee);
-            this.Controls.Add(this.btnAjouterUneLigneV3);
-            this.Controls.Add(this.btnPeuplerListView);
-            this.Controls.Add(this.lsvExemple);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.Name = "FrmPrincipal";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Introduction au ListView ";
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(597, 362);
+            Controls.Add(btnAjouterUneLigneV2);
+            Controls.Add(btnAjouterUneLigneV1);
+            Controls.Add(btnAfficherLigneSelectionnee);
+            Controls.Add(btnAjouterUneLigneV3);
+            Controls.Add(btnPeuplerListView);
+            Controls.Add(lsvExemple);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            Name = "FrmPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Introduction au ListView ";
+            ResumeLayout(false);
 
         }
 

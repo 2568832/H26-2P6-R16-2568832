@@ -2,9 +2,12 @@ namespace IntroListView
 {
     public partial class FrmPrincipal : Form
     {
+       
+
         public FrmPrincipal()
         {
             InitializeComponent();
+            
         }
         //=====================================================================================
         /// <summary>
@@ -13,6 +16,8 @@ namespace IntroListView
         /// ----------------------------------------------------------------------------------
         private void btnAjouterUneLigneV1_Click(object sender, EventArgs e)
         {
+            ListViewItem ligne = new ListViewItem("Allo");
+            lsvExemple.Items.Add(ligne);
         }
         //=====================================================================================
         /// <summary>
@@ -20,8 +25,13 @@ namespace IntroListView
         ///                - x représente le numéro (commence à 1) de la ligne où l'on est rendu dans la liste.
         /// </summary>
         /// ----------------------------------------------------------------------------------
+        /// 
         private void btnAjouterUneLigneV2_Click(object sender, EventArgs e)
         {
+            
+            ListViewItem ligne = new ListViewItem($"ligne#{lsvExemple.Items.Count}");
+            
+            lsvExemple.Items.Add(ligne);
         }
         //============================================================================================
         /// <summary>
@@ -31,6 +41,13 @@ namespace IntroListView
         /// -----------------------------------------------------------------------------------------
         private void btnAjouterUneLigneV3_Click(object sender, EventArgs e)
         {
+            ListViewItem ligne = new ListViewItem($"ligne#{lsvExemple.Items.Count}");
+            ligne.SubItems.Add($"Info 1");
+            ligne.SubItems.Add($"Info 2");
+            ligne.SubItems.Add($"Info 3");
+
+
+            lsvExemple.Items.Add(ligne);
         }
         //=====================================================================================
         /// <summary>
@@ -40,6 +57,11 @@ namespace IntroListView
         /// ----------------------------------------------------------------------------------
         private void btnAfficherIndexLigneSelectionnee_Click(object sender, EventArgs e)
         {
+            if (lsvExemple.SelectedIndices.Count > 0)
+            {
+                MessageBox.Show(lsvExemple.SelectedIndices[0].ToString());
+            }
+            
         }
         //=====================================================================================
         /// <summary>
@@ -52,6 +74,24 @@ namespace IntroListView
         /// ----------------------------------------------------------------------------------
         private void btnPeuplerListView_Click(object sender, EventArgs e)
         {
+            for (int i = 1; i < 10; i++)
+            {
+                ListViewItem ligne = new ListViewItem($"L{lsvExemple.Items.Count+1}:C1");
+                ligne.SubItems.Add($"L{lsvExemple.Items.Count + 1}:C2");
+                ligne.SubItems.Add($"L{lsvExemple.Items.Count + 1}:C3");
+                ligne.SubItems.Add($"L{lsvExemple.Items.Count + 1}:C4");
+
+                lsvExemple.Items.Add(ligne);
+
+            }
+
+
+
+        }
+
+        private void lsvExemple_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
